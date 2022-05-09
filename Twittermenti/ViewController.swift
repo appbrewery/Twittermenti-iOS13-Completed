@@ -17,9 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var sentimentLabel: UILabel!
     
     let tweetCount = 100
-    
-    var swifter: Swifter?
-    
+        
     let sentimentClassfier = try! TweetSentimentClassifier(configuration: MLModelConfiguration())
     
     let swifter = Swifter(consumerKey: "_your_key_here", consumerSecret: "_your_secret_here_")
