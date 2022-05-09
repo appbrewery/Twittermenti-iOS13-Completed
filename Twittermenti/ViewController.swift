@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwifteriOS
+import Swifter
 import CoreML
 import SwiftyJSON
 
@@ -18,7 +18,9 @@ class ViewController: UIViewController {
     
     let tweetCount = 100
     
-    let sentimentClassifier = TweetSentimentClassifier()
+    var swifter: Swifter?
+    
+    let sentimentClassfier = try! TweetSentimentClassifier(configuration: MLModelConfiguration())
     
     let swifter = Swifter(consumerKey: "_your_key_here", consumerSecret: "_your_secret_here_")
 
@@ -36,23 +38,25 @@ class ViewController: UIViewController {
         
         if let searchText = textField.text {
             
-            swifter.searchTweet(using: searchText, lang: "en", count: tweetCount, tweetMode: .extended, success: { (results, metadata) in
+            swifter?.searchTweet(using: searchText, lang: "en", count: tweetCount, success: { (results, searchMetadata) in
                 
                 var tweets = [TweetSentimentClassifierInput]()
                 
-                for i in 0..<self.tweetCount {
-                    if let tweet = results[i]["full_text"].string {
-                        let tweetForClassification = TweetSentimentClassifierInput(text: tweet)
-                        tweets.append(tweetForClassification)
-                    }
+                for i in 0..<tweetCount {
+                if let tweet = results[i]["text"].string{
+                    
+                    let tweetForClassification = TweetSentimentClassifierInput(text: tweet)
+                    tweets.append(tweetForClassification)
+                }
                 }
                 
-                self.makePrediction(with: tweets)
-                
-            }) { (error) in
-                print("There was an error with the Twitter API Request, \(error)")
-            }
+                self.makePredictions(with: tweets)
+            
+            }, failure: { error in
+                print("There was an error with the TWITTER API Request,\(error)")
+            })
         }
+
         
     }
     
@@ -102,4 +106,5 @@ class ViewController: UIViewController {
     }
     
 }
+
 

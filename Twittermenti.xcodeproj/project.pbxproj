@@ -13,8 +13,9 @@
 		AD9EC65720FE2EF7002AE9BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD9EC65620FE2EF7002AE9BF /* Assets.xcassets */; };
 		AD9EC65A20FE2EF7002AE9BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9EC65820FE2EF7002AE9BF /* LaunchScreen.storyboard */; };
 		AD9EC66220FE319B002AE9BF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD9EC66120FE319A002AE9BF /* README.md */; };
-		ADEB1F8420FE457800C3C04D /* TweetSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = ADEB1F8320FE457800C3C04D /* TweetSentimentClassifier.mlmodel */; };
 		B4CCE3E2529D6B6C45CA1121 /* Pods_Twittermenti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F365D3D6A6EF1A13FCC952A /* Pods_Twittermenti.framework */; };
+		E3A8DF012829A04400E64D81 /* TweetSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E3A8DF002829A04400E64D81 /* TweetSentimentClassifier.mlmodel */; };
+		E3A8DF032829A04F00E64D81 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E3A8DF022829A04F00E64D81 /* Podfile */; };
 		EB5AE4DE23D22B0200D04063 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5AE4D723D22ADB00D04063 /* SwifteriOS.framework */; };
 		EB5AE4DF23D22B0200D04063 /* SwifteriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB5AE4D723D22ADB00D04063 /* SwifteriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -83,7 +84,8 @@
 		AD9EC65920FE2EF7002AE9BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD9EC65B20FE2EF7002AE9BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD9EC66120FE319A002AE9BF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		ADEB1F8320FE457800C3C04D /* TweetSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifier.mlmodel; sourceTree = "<group>"; };
+		E3A8DF002829A04400E64D81 /* TweetSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifier.mlmodel; sourceTree = "<group>"; };
+		E3A8DF022829A04F00E64D81 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		EB5AE4CC23D22ADB00D04063 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = Swifter/Swifter.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,7 +133,7 @@
 		AD9EC64E20FE2EF4002AE9BF /* Twittermenti */ = {
 			isa = PBXGroup;
 			children = (
-				ADEB1F8320FE457800C3C04D /* TweetSentimentClassifier.mlmodel */,
+				E3A8DF002829A04400E64D81 /* TweetSentimentClassifier.mlmodel */,
 				AD9EC64F20FE2EF4002AE9BF /* AppDelegate.swift */,
 				AD9EC65120FE2EF4002AE9BF /* ViewController.swift */,
 				AD9EC65320FE2EF4002AE9BF /* Main.storyboard */,
@@ -145,6 +147,7 @@
 		B0D57FF9C1E9E9B3214B7E57 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				E3A8DF022829A04F00E64D81 /* Podfile */,
 				4A39D16E5D4CC1B8769B131A /* Pods-Twittermenti.debug.xcconfig */,
 				8DB85FE86412ED0D850C1485 /* Pods-Twittermenti.release.xcconfig */,
 			);
@@ -269,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A8DF032829A04F00E64D81 /* Podfile in Resources */,
 				AD9EC65A20FE2EF7002AE9BF /* LaunchScreen.storyboard in Resources */,
 				AD9EC65720FE2EF7002AE9BF /* Assets.xcassets in Resources */,
 				AD9EC66220FE319B002AE9BF /* README.md in Resources */,
@@ -321,7 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADEB1F8420FE457800C3C04D /* TweetSentimentClassifier.mlmodel in Sources */,
+				E3A8DF012829A04400E64D81 /* TweetSentimentClassifier.mlmodel in Sources */,
 				AD9EC65220FE2EF4002AE9BF /* ViewController.swift in Sources */,
 				AD9EC65020FE2EF4002AE9BF /* AppDelegate.swift in Sources */,
 			);
